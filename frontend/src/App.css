@@ -7,6 +7,7 @@ a{
 
 /* NavBar */
 .navbar{
+  background-color: white;
   position: fixed;
   width: 100%;
   height: 13vh;
@@ -15,6 +16,7 @@ a{
   border-bottom: 3px solid black;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .logo-div{
@@ -45,4 +47,104 @@ a{
   color: white;
   padding: 13% 26%;
   border-radius: 20px;
+}
+
+/* Home */
+
+.home{
+  padding: 13vh 5vh 5vh 5vh;
+}
+
+.contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3vw;
+  width: 100%;
+}
+
+.card{
+  border-radius: 20px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  height: fit-content;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.card:hover{
+  box-shadow: 0px 0px 15px #000, 0px 0px 55px #858585;
+}
+
+.card-img{
+  height: 30vh;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card-content{
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content-top{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product-name{
+  font-size: x-large;
+  margin: 2%;
+}
+
+.product-rating{
+  font-size: x-large;
+  margin: 0%;
+}
+
+.product-price{
+  font-size: x-large;
+  margin: 2%;
+}
+
+.product-decription{
+  font-size: small;
+  margin: 0%;
+  text-align: justify;
+  padding: 2%;
+}
+
+@media screen and (min-width: 650px) and (max-width: 1000px){
+  .contents {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px){
+
+  .contents {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3vw;
+    width: 100%;
+  }
+  .navbar{
+    justify-content: space-between;
+  }
+  .nav-contents-div{
+    display: none;
+  }
+  .logo-div{
+    width: 30%;
+  }
+  .login-div{
+    width: 40%;
+  }
 }
